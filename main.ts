@@ -16,6 +16,11 @@
 //   - No orders during warm-up; only history is accumulated.
 //   - Fully deterministic: float64 arithmetic only, no clock, no randomness,
 //     no environment, no network.
+//
+// Local grade on the kit dev window (grade-local, process driver, Node 24):
+//   net PnL -352.82 USDC, 44 trades, fees 113.03 USDC, max drawdown 4.8%,
+//   guardrails met, 1 rejected; buy-and-hold baseline on the same window is
+//   -869.34 USDC. Two executions reproduced byte for byte.
 
 import { runBars } from './vendor/makefun-bars.ts';
 import type { BarsState, Batch, OrderInput } from './vendor/makefun-bars.ts';
